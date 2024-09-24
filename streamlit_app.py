@@ -36,7 +36,7 @@ filtered_df = filtered_df[
     (filtered_df['ocean_proximity'].isin(selected_location_types))
 ]
 
-st.title(See more filters in the sidebar:)
+st.title('See more filters in the sidebar:')
 
 layer = pdk.Layer(
     "ScatterplotLayer",
