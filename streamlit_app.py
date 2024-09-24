@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-import geopandas as gpd
 import pydeck as pdk
 @st.cache_data
 def load_data():
