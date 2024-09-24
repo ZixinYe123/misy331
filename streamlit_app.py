@@ -40,8 +40,8 @@ layer = pdk.Layer(
     "ScatterplotLayer",
     data=filtered_df,
     get_position='[longitude, latitude]',
-    get_radius=100,
-    get_color='[200, 30, 0, 160]',
+    get_radius=500,
+    get_color='[255, 0, 0, 160]',
     pickable=True
 )
 
@@ -54,8 +54,11 @@ view_state = pdk.ViewState(
 )
 
 # 渲染地图
-st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
-
+st.pydeck_chart(pdk.Deck(
+    layers=[layer], 
+    initial_view_state=view_state,
+    map_style='mapbox://styles/mapbox/light-v10'  # 设置Mapbox样式
+))
 
 # 绘制房屋中位价格的直方图
 st.subheader("Histogram of Median House Values")
